@@ -5,7 +5,7 @@
 define('HOST', 'localhost');
 
 //dbname 
-define('DBNAME', 'db_payment_page_paypal');
+define('DBNAME', 'db_paypal_payment_page');
 
 //username
 define('USERNAME', 'root');
