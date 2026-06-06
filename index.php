@@ -57,7 +57,8 @@ $products = $stmt->fetchALL(PDO::FETCH_OBJ);
               <div class="text-muted d-inline">($<?= $product->price ?>/item)</div>
             </h5>
             <p><?= $product->description; ?> </p>
-            <a href="pay.php" class="btn btn-primary w-100 rounded my-2"> Pay Now <i class="fas fa-arrow-right"></i>
+            <a href="pay.php?id=<?php echo $product->id; ?>" class="btn btn-primary w-100 rounded my-2"> Pay Now <i
+                class="fas fa-arrow-right"></i>
             </a>
 
           </div>
@@ -72,7 +73,7 @@ $products = $stmt->fetchALL(PDO::FETCH_OBJ);
 
 
 
-  <footer class="bg-dark text-white text-center text-lg-start" style="margin-top: 40px">
+  <footer class=" bg-dark text-white text-center text-lg-start" style="margin-top: 40px">
     <!-- Grid container -->
     <div class="container p-4">
       <!--Grid row-->

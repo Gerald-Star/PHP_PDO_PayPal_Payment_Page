@@ -82,7 +82,11 @@ https://www.php.net/manual/en/pdo.constants.fetch-modes.php
 AdDzposKwjgDGaJHVfK9hdiZD5k4fv4hYuBWEHpc3zRiUETaE0OrMf15GjJ9mj3bq1uR8devk1vt5dBy
 
 
-Integrate PayPal Checkout
+## Integrate PayPal Checkout
+
+https://developer.paypal.com/studio/checkout/standard/integrate
+
+
 Before beginning your integration, you need to set up your development environment. You can refer to this flow diagram, and watch a video demonstrating how to integrate PayPal Checkout.
 
 Start your integration by grabbing the sample code from PayPal’s GitHub repo, or visiting the PayPal GitHub Codespace. Read the Codespaces guide for more information. You can also use Postman to explore and test PayPal APIs. Read the Postman Guide for more information.

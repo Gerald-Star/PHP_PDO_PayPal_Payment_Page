@@ -1,3 +1,18 @@
+<?php
+require 'config/config.php';
+
+if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+  $stmt = $pdo->prepare("SELECT * FROM products WHERE id = :id");
+  $stmt->execute(['id' => $id]);
+  $SingleProduct = $stmt->fetch(PDO::FETCH_ASSOC);
+} else {
+  header('Location: index.php');
+}
+ 
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -9,7 +24,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/5c5946fe44.js" crossorigin="anonymous"></script>
-  <title>PHP PayPal Payment Page</title>
+  <title>Payment Page</title>
 </head>
 
 <body>
@@ -41,7 +56,7 @@
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: '100' // Can also reference a variable or function
+              value: '<?= htmlspecialchars($SingleProduct["price"]) ?>' // Can also reference a variable or function
             }
           }]
         });
