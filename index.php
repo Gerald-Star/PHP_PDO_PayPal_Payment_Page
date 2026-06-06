@@ -57,7 +57,8 @@ $products = $stmt->fetchALL(PDO::FETCH_OBJ);
               <div class="text-muted d-inline">($<?= $product->price ?>/item)</div>
             </h5>
             <p><?= $product->description; ?> </p>
-            <a href="#" class="btn btn-primary w-100 rounded my-2"> Pay Now <i class="fas fa-arrow-right"></i> </a>
+            <a href="pay.php" class="btn btn-primary w-100 rounded my-2"> Pay Now <i class="fas fa-arrow-right"></i>
+            </a>
 
           </div>
         </div>
